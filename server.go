@@ -1,12 +1,12 @@
 package main
 
 import (
+	"go-logger"
 	"net/http"
 )
 
-import logger "github.com/guzmanweb/go-logger"
-
 func hello(w http.ResponseWriter, r *http.Request) {
+	logger.Info("hello world request")
 	w.Write([]byte("Hello World"))
 }
 
