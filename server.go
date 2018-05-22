@@ -1,13 +1,13 @@
 package main
 
 import (
-	"go-logger"
+	"go-webserver/logger"
 	"net/http"
 )
 
 func hello(w http.ResponseWriter, r *http.Request) {
 	logger.Info("hello world request")
-	w.Write([]byte("Hello World"))
+	w.Write([]byte("Hello World!"))
 }
 
 func main() {
